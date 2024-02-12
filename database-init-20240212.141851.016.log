@@ -1,0 +1,193 @@
+[2024-02-12 14:18:51] This is codeql database init --language=java --source-root=C:\Downloads\codeQl Java\src codeQLdb
+[2024-02-12 14:18:51] Log file was started late.
+[2024-02-12 14:18:51] Calling plumbing command: codeql resolve languages --extractor-options-verbosity=1 --format=betterjson
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Scanning for [codeql-extractor.yml] from C:\Users\amita\OneDrive - UW\Documents\codeql\.codeqlmanifest.json
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\cpp\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\csharp\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\csv\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\go\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\html\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\java\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\javascript\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\properties\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\python\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\ruby\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\swift\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\xml\codeql-extractor.yml.
+[2024-02-12 14:18:51] [DETAILS] resolve languages> Parsing C:\Users\amita\OneDrive - UW\Documents\codeql\yaml\codeql-extractor.yml.
+[2024-02-12 14:18:51] Plumbing command codeql resolve languages completed:
+                      {
+                        "aliases" : {
+                          "c" : "cpp",
+                          "c++" : "cpp",
+                          "c-c++" : "cpp",
+                          "c-cpp" : "cpp",
+                          "c#" : "csharp",
+                          "java-kotlin" : "java",
+                          "kotlin" : "java",
+                          "javascript-typescript" : "javascript",
+                          "typescript" : "javascript"
+                        },
+                        "extractors" : {
+                          "cpp" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\cpp",
+                              "extractor_options" : { }
+                            }
+                          ],
+                          "csharp" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\csharp",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip|brotli)$"
+                                    }
+                                  }
+                                },
+                                "buildless" : {
+                                  "title" : "Whether to use buildless (standalone) extraction.",
+                                  "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "cil" : {
+                                  "title" : "Whether to enable CIL extraction.",
+                                  "description" : "A value indicating, whether CIL extraction should be enabled. The default is 'true'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "csv" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\csv"
+                            }
+                          ],
+                          "go" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\go"
+                            }
+                          ],
+                          "html" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\html"
+                            }
+                          ],
+                          "java" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\java",
+                              "extractor_options" : {
+                                "exclude" : {
+                                  "title" : "A glob excluding files from analysis.",
+                                  "description" : "A glob indicating what files to exclude from the analysis.\n",
+                                  "type" : "string"
+                                },
+                                "add_prefer_source" : {
+                                  "title" : "Whether to always prefer source files over class files.",
+                                  "description" : "A value indicating whether source files should be preferred over class files. If set to 'true', the extraction adds '-Xprefer:source' to the javac command line. If set to 'false', the extraction uses the default javac behavior ('-Xprefer:newer'). The default is 'true'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "buildless" : {
+                                  "title" : "Whether to use buildless (standalone) extraction (experimental).",
+                                  "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "javascript" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\javascript",
+                              "extractor_options" : {
+                                "skip_types" : {
+                                  "title" : "Skip type extraction for TypeScript",
+                                  "description" : "Whether to skip the extraction of types in a TypeScript application",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "properties" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\properties"
+                            }
+                          ],
+                          "python" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\python",
+                              "extractor_options" : {
+                                "logging" : {
+                                  "title" : "Options pertaining to logging.",
+                                  "description" : "Options pertaining to logging.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "verbosity" : {
+                                      "title" : "Python extractor logging verbosity level.",
+                                      "description" : "Controls the level of verbosity of the CodeQL Python extractor.\nThe supported levels are (in order of increasing verbosity):\n\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+                                      "type" : "string",
+                                      "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          "ruby" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\ruby",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (the default, to write gzip-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip)$"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          "swift" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\swift"
+                            }
+                          ],
+                          "xml" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\xml"
+                            }
+                          ],
+                          "yaml" : [
+                            {
+                              "extractor_root" : "C:\\Users\\amita\\OneDrive - UW\\Documents\\codeql\\yaml"
+                            }
+                          ]
+                        }
+                      }
+[2024-02-12 14:18:51] [PROGRESS] database init> Calculating baseline information in C:\Downloads\codeQl Java\src
+[2024-02-12 14:18:51] [SPAMMY] database init> Ignoring the following directories when processing baseline information: .git, .hg, .svn.
+[2024-02-12 14:18:51] [DETAILS] database init> Running command in C:\Downloads\codeQl Java\src: C:\Users\amita\OneDrive - UW\Documents\codeql\tools\win64\scc.exe --by-file --exclude-dir .git,.hg,.svn --format json --no-large --no-min .
+[2024-02-12 14:18:52] [SPAMMY] database init> Found 1 baseline files for java.
+[2024-02-12 14:18:52] [PROGRESS] database init> Calculated baseline information for languages: java (473ms).
+[2024-02-12 14:18:52] [PROGRESS] database init> Resolving extractor java.
+[2024-02-12 14:18:52] [DETAILS] database init> Found candidate extractor root for java: C:\Users\amita\OneDrive - UW\Documents\codeql\java.
+[2024-02-12 14:18:52] [PROGRESS] database init> Successfully loaded extractor Java/Kotlin (java) from C:\Users\amita\OneDrive - UW\Documents\codeql\java.
+[2024-02-12 14:18:52] [PROGRESS] database init> Created skeleton CodeQL database at C:\Users\amita\OneDrive - UW\Documents\codeql\codeQLdb. This in-progress database is ready to be populated by an extractor.
+[2024-02-12 14:18:52] Terminating normally.
