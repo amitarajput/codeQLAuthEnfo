@@ -1,0 +1,39 @@
+---
+sourceLocationPrefix: C:\Downloads\codeQl Java\src
+baselineLinesOfCode: 14
+unicodeNewlines: false
+columnKind: utf16
+primaryLanguage: java
+inProgress:
+  primaryLanguage: java
+  installedExtractors:
+    cpp:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/cpp
+    csharp:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/csharp
+    csv:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/csv
+    go:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/go
+    html:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/html
+    java:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/java
+    javascript:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/javascript
+    properties:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/properties
+    python:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/python
+    ruby:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/ruby
+    swift:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/swift
+    xml:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/xml
+    yaml:
+     - C:/Users/amita/OneDrive - UW/Documents/codeql/yaml
+creationMetadata:
+  cliVersion: 2.16.1
+  creationTime: 2024-02-12T19:18:52.164305200Z
+finalised: false
